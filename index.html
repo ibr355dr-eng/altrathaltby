@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تراث الطب العربي — أرشيف المراجع والبحوث</title>
+<meta name="description" content="أرشيف رقمي يجمع المراجع والبحوث والملاحظات في تاريخ الطب عند العرب والمسلمين: مخطوطات، مكتبات رقمية، دراسات ومقالات محكّمة.">
+<meta name="author" content="تراث الطب العربي">
+<meta name="theme-color" content="#16433f">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:title" content="تراث الطب العربي — أرشيف المراجع والبحوث">
+<meta property="og:description" content="أرشيف رقمي يجمع المراجع والبحوث والملاحظات في تاريخ الطب عند العرب والمسلمين.">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2316433f'/%3E%3Cg fill='none' stroke='%23d8ab5e' stroke-width='2.5'%3E%3Crect x='18' y='18' width='28' height='28' transform='rotate(45 32 32)'/%3E%3Crect x='18' y='18' width='28' height='28'/%3E%3C/g%3E%3Ccircle cx='32' cy='32' r='4' fill='%23d8ab5e'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/styles.css">
+
+<script>
+  // منع وميض السمة قبل تحميل الصفحة
+  (function () {
+    try {
+      var t = localStorage.getItem('turath-theme');
+      if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    } catch (e) { document.documentElement.setAttribute('data-theme', 'light'); }
+  })();
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#main">تجاوز إلى المحتوى</a>
+
+<!-- ======================= الترويسة ======================= -->
+<header class="site-head">
+  <div class="head-pattern" aria-hidden="true"></div>
+
+  <div class="head-bar">
+    <div class="wrap head-bar-inner">
+      <span class="head-bar-text">أرشيف رقمي للتراث الطبي العربي والإسلامي</span>
+      <button id="themeToggle" class="icon-btn" type="button" aria-label="تبديل الوضع الليلي" title="تبديل الوضع الليلي">
+        <svg class="ico-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+        <svg class="ico-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="wrap head-main">
+    <div class="medallion" aria-hidden="true">
+      <svg viewBox="0 0 120 120">
+        <g class="med-geo">
+          <circle cx="60" cy="60" r="54"/>
+          <circle cx="60" cy="60" r="44"/>
+          <rect x="26" y="26" width="68" height="68"/>
+          <rect x="26" y="26" width="68" height="68" transform="rotate(45 60 60)"/>
+        </g>
+        <g class="med-core">
+          <path d="M60 40c-8 6-14 10-14 18 0 8 6 14 14 14s14-6 14-14c0-8-6-12-14-18z"/>
+        </g>
+      </svg>
+    </div>
+
+    <h1 class="site-title">تراث الطب العربي</h1>
+    <div class="rule" aria-hidden="true"><span></span><i></i><span></span></div>
+    <p class="site-tagline">
+      مجموعة مراجعي وبحوثي وملاحظاتي في تاريخ الطب عند العرب والمسلمين —
+      مخطوطات، مكتبات رقمية، دراسات، ومصادر محقّقة، مرتّبة في مكان واحد.
+    </p>
+
+    <dl class="stats" id="stats">
+      <div><dt>مصدر</dt><dd id="statTotal">0</dd></div>
+      <div><dt>تصنيف</dt><dd id="statCats">0</dd></div>
+      <div><dt>مميّز</dt><dd id="statFeat">0</dd></div>
+    </dl>
+  </div>
+</header>
+
+<!-- ======================= شريط الأدوات ======================= -->
+<div class="toolbar" id="toolbar">
+  <div class="wrap">
+    <div class="toolbar-row">
+      <div class="search">
+        <svg class="search-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5L21 21"/></svg>
+        <input id="search" type="search" inputmode="search" autocomplete="off"
+               placeholder="ابحث في العناوين والوصف والوسوم…" aria-label="بحث في المصادر">
+        <button id="searchClear" class="search-clear" type="button" aria-label="مسح البحث" hidden>&times;</button>
+      </div>
+
+      <div class="selects">
+        <label class="field">
+          <span>النوع</span>
+          <select id="typeFilter" aria-label="تصفية حسب النوع"><option value="">كل الأنواع</option></select>
+        </label>
+        <label class="field">
+          <span>الترتيب</span>
+          <select id="sort" aria-label="ترتيب النتائج">
+            <option value="default">المميّز أولاً</option>
+            <option value="newest">الأحدث إضافة</option>
+            <option value="alpha">أبجدي (أ — ي)</option>
+            <option value="category">حسب التصنيف</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div class="chips" id="chips" role="group" aria-label="تصفية حسب التصنيف"></div>
+
+    <p class="result-count" id="count" role="status" aria-live="polite"></p>
+  </div>
+</div>
+
+<!-- ======================= المحتوى ======================= -->
+<main id="main" class="wrap main">
+  <section id="grid" class="grid" aria-label="قائمة المصادر والبحوث"></section>
+
+  <div id="empty" class="empty" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5L21 21"/></svg>
+    <h2>لا توجد نتائج مطابقة</h2>
+    <p>جرّب كلمة بحث أخرى أو أعِد ضبط التصفية.</p>
+    <button class="btn btn-ghost" type="button" id="resetAll">إعادة ضبط الكل</button>
+  </div>
+</main>
+
+<!-- ======================= التذييل ======================= -->
+<footer class="site-foot">
+  <div class="rule rule-foot" aria-hidden="true"><span></span><i></i><span></span></div>
+  <div class="wrap foot-inner">
+    <p class="foot-quote">«مَن أراد الحكمةَ فليطلبها في كتب الأوّلين» — من أدب الأطباء</p>
+    <p class="foot-meta">
+      تراث الطب العربي · أرشيف شخصي للمراجع والبحوث
+      <span class="dot">·</span>
+      <span id="year"></span>
+    </p>
+    <p class="foot-note">جميع الروابط الخارجية ملك أصحابها، وتُعرض هنا لغرض البحث العلمي والإحالة.</p>
+  </div>
+</footer>
+
+<!-- ======================= نافذة العرض ======================= -->
+<div id="modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel" role="document">
+    <header class="modal-head">
+      <div class="modal-head-text">
+        <p class="modal-kicker" id="modalKicker"></p>
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <p class="modal-url" id="modalUrl"></p>
+      </div>
+      <div class="modal-head-actions">
+        <a id="modalOpen" class="btn btn-gold" href="#" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-8.5 8.5"/><path d="M19 14v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+          <span>تبويب جديد</span>
+        </a>
+        <button class="icon-btn" type="button" id="modalClose" data-close aria-label="إغلاق النافذة" title="إغلاق (Esc)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="modal-body" id="modalBody">
+      <div class="modal-loader" id="modalLoader"><span class="spinner" aria-hidden="true"></span><p>جارٍ تحميل المصدر…</p></div>
+      <div class="modal-note" id="modalNote" hidden></div>
+      <div class="modal-hint" id="modalHint" hidden>
+        <div>
+          <strong>لم يظهر المحتوى؟</strong>
+          <p>كثير من المكتبات والمجلات العلمية تمنع عرض صفحاتها داخل النوافذ المدمجة — افتح المصدر في تبويب جديد لرؤيته كاملاً.</p>
+        </div>
+        <button class="icon-btn" type="button" id="modalHintClose" aria-label="إخفاء التنبيه">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <iframe id="modalFrame" title="عرض المصدر" referrerpolicy="no-referrer"
+              sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"></iframe>
+    </div>
+  </div>
+</div>
+
+<script src="data/resources.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
