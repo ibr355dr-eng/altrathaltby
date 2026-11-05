@@ -286,7 +286,7 @@ def build_meta(urls, research):
     sm = "".join(f"<url><loc>{DOMAIN}{u}</loc><lastmod>{lm}</lastmod></url>" for u, lm in urls)
     write("sitemap.xml", f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sm}</urlset>')
     write("robots.txt", f"User-agent: *\nAllow: /\nDisallow: /404.html\n\nSitemap: {DOMAIN}/sitemap.xml\n")
-    write("CNAME", DOMAIN.split("//")[1] + "\n")
+    write("CNAME", DOMAIN.split("//")[1])
     write(".nojekyll", "")
     write("site.webmanifest", json.dumps({"name": CFG["name"], "short_name": CFG["name"], "lang": "ar", "dir": "rtl", "start_url": "/",
           "display": "standalone", "background_color": "#f7f3ea", "theme_color": "#7a4b1f",
